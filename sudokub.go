@@ -208,7 +208,7 @@ var posvert int =0
 		if (FilledIN[i][j] != b[i][j] && FilledIN[i][j] != 0) { 
 
 				table.SetCell(i, j,
-				tview.NewTableCell(strconv.Itoa(FilledIN[i][j]) + " ").
+				tview.NewTableCell(strconv.Itoa(FilledIN[i][j])).
 					SetTextColor(colorb).
 					SetBackgroundColor(tcell.ColorSilver).
 					SetAttributes(tcell.AttrBold).
@@ -218,9 +218,12 @@ var posvert int =0
 	
 				
 		} else {
-
+			var valuecellblock string
+			
+			if (b[i][j] ==0) { valuecellblock = "" } else {valuecellblock = strconv.Itoa(b[i][j]) }
+		
 					table.SetCell(i, j,
-				tview.NewTableCell(strconv.Itoa(b[i][j]) + " ").
+				tview.NewTableCell(valuecellblock).
 				SetBackgroundColor(tcell.ColorSilver).
 					SetTextColor(tcell.ColorBlack).
 					SetAttributes(tcell.AttrBold).
