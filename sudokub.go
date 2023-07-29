@@ -124,9 +124,8 @@ baseUNSOLVED = createEmptyBoard()
 	COMPLETED = createSolvedSudoku(COMPLETED, diff)
 
 	
-	
-printBase(COMPLETED)
-fmt.Scanln()
+
+
 mainmenu()
 
 	FilledIN = createEmptyBoard()
@@ -184,13 +183,14 @@ main()
 var intVar int =0
 app := tview.NewApplication()
 colorb := tcell.ColorBlue
-color := tcell.ColorWhite
 		table := tview.NewTable().
 		SetBorders(false)
 
 		
 		s, _ := tcell.NewScreen()
 		s.EnableMouse()
+var posvert int =0
+
 	for i := 0; i < 9; i++ {
 		for j := 0; j < 9; j++ {
 		//valbutton := strconv.Itoa(b[i][j])
@@ -210,7 +210,10 @@ color := tcell.ColorWhite
 				table.SetCell(i, j,
 				tview.NewTableCell(strconv.Itoa(FilledIN[i][j]) + " ").
 					SetTextColor(colorb).
-					SetAlign(tview.AlignLeft)).
+					SetBackgroundColor(tcell.ColorSilver).
+					SetAttributes(tcell.AttrBold).
+					SetExpansion(5).
+					SetAlign(tview.AlignCenter)).
 					SetBorders(false)
 	
 				
@@ -218,11 +221,14 @@ color := tcell.ColorWhite
 
 					table.SetCell(i, j,
 				tview.NewTableCell(strconv.Itoa(b[i][j]) + " ").
-					SetTextColor(color).
+				SetBackgroundColor(tcell.ColorSilver).
+					SetTextColor(tcell.ColorBlack).
+					SetAttributes(tcell.AttrBold).
+					SetExpansion(5).
 					SetAlign(tview.AlignCenter))
 					}
 		}
-		
+		posvert++
 		fmt.Println("\r\n")
 	}
 	
