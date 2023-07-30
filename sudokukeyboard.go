@@ -61,7 +61,7 @@ func main() {
 	}()
 	
 	
-fmt.Print("Sudoku Puzzle\n\nHelp:\nUse w,a,s,d keys to move\nuse e or number 1-9 keys to select or save new value\nuse f for autofind empty block\nUse enter key after movement or edit\n")
+fmt.Print("Sudoku Puzzle\n\nHelp:\nUse arrow keys to move\nuse e or number 1-9 keys to select or save new value\nuse f for autofind empty block\n")
 fmt.Print("\nPlayers: ")
 fmt.Scanln(&players)
 if (players > 2) { players=2 }
