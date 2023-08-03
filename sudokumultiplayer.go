@@ -34,7 +34,7 @@ var scorePlayer1 int =0
 var scorePlayer2 int =0
 var diff int = 65
 var newint int =0
-var server = "tbwebspecialist.nl/sudoku"
+var server = "127.0.0.1" //"http://" + server + "/sudokuserver.php?action=stophost&nameserver="+nameserver)
 var multiplayermoveold string
 var nameserver string
 var strBoardSolved string
