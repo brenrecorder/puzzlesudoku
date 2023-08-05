@@ -18,8 +18,6 @@ if (file_exists("sudokuserver.db")) { //CREATE DATABASE
 } else {
 	$db = new SQLite3('sudokuserver.db');
 	$db->querySingle($sqlNewTableSudokuHosts);
-
-	//$db->exec("INSERT INTO CoinSecure(Address, Amount, AmountRGB) VALUES('TotalMarket', '0', 'XXXXXX')");	
 	echo "Tables and file sudoku created..";
 }
 
